@@ -1,0 +1,195 @@
+.gamification-panel {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.gamification-panel h3 {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.gamification-panel h4 {
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+}
+
+/* Level Section */
+.level-section {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-surface-elevated);
+}
+
+.level-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.level-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.level-icon {
+    font-size: 3rem;
+}
+
+.level-name {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.level-points {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.next-level {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+}
+
+.level-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.level-progress .progress-bar {
+    flex: 1;
+}
+
+.progress-text {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    min-width: 40px;
+    text-align: right;
+}
+
+/* Badges */
+.badges-section {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-surface-elevated);
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--space-md);
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background-color: var(--color-surface-elevated);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.badge-item:hover {
+    background-color: hsl(220, 15%, 25%);
+    transform: translateY(-2px);
+}
+
+.badge-icon {
+    font-size: 2rem;
+}
+
+.badge-name {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.badge-description {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Missions */
+.missions-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.mission-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background-color: var(--color-surface-elevated);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    transition: all var(--transition-base);
+}
+
+.mission-item.completed {
+    opacity: 0.6;
+    border-color: var(--color-success);
+}
+
+.mission-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex: 1;
+}
+
+.mission-icon {
+    font-size: 1.5rem;
+}
+
+.mission-name {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+}
+
+.mission-description {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.mission-points {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+    .level-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    .next-level {
+        align-items: flex-start;
+    }
+
+    .badges-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

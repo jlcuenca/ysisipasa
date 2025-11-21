@@ -1,0 +1,9 @@
+.profile-screen {
+    min-height: calc(100vh - 60px);
+    padding: var(--space-3xl) 0;
+}
+
+.profile-content {
+    text-align: center;
+    padding: var(--space-3xl);
+}

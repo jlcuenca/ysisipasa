@@ -1,0 +1,442 @@
+{
+    "categories": [
+        {
+            "id": "health",
+            "name": "Salud",
+            "icon": "❤️",
+            "description": "Evalúa tus riesgos de salud y estilo de vida",
+            "questions": [
+                {
+                    "id": "h1",
+                    "text": "¿Haces ejercicio regularmente?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "yes_daily",
+                            "label": "Sí, casi a diario",
+                            "riskWeight": 0.3
+                        },
+                        {
+                            "value": "sometimes",
+                            "label": "A veces (1-2 veces por semana)",
+                            "riskWeight": 0.6
+                        },
+                        {
+                            "value": "rarely",
+                            "label": "Casi nunca",
+                            "riskWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "h2",
+                    "text": "¿Tienes alguna condición de salud preexistente?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "none",
+                            "label": "No, ninguna",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "minor",
+                            "label": "Sí, algo leve (controlado)",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "major",
+                            "label": "Sí, algo importante",
+                            "riskWeight": 0.8
+                        }
+                    ]
+                },
+                {
+                    "id": "h3",
+                    "text": "¿Fumas o consumes alcohol frecuentemente?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "no",
+                            "label": "No",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "occasionally",
+                            "label": "Ocasionalmente",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "frequently",
+                            "label": "Sí, frecuentemente",
+                            "riskWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "h4",
+                    "text": "¿Tienes historial familiar de enfermedades importantes?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "no",
+                            "label": "No",
+                            "riskWeight": 0.3
+                        },
+                        {
+                            "value": "some",
+                            "label": "Sí, algunas",
+                            "riskWeight": 0.6
+                        },
+                        {
+                            "value": "multiple",
+                            "label": "Sí, varias",
+                            "riskWeight": 0.85
+                        }
+                    ]
+                },
+                {
+                    "id": "h5_insurance",
+                    "text": "¿Tienes seguro de gastos médicos?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "comprehensive",
+                            "label": "Sí, con buena cobertura",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "basic",
+                            "label": "Sí, pero básico",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "none",
+                            "label": "No tengo",
+                            "riskWeight": 1.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "financial",
+            "name": "Finanzas",
+            "icon": "💰",
+            "description": "Evalúa tu situación financiera y estabilidad",
+            "questions": [
+                {
+                    "id": "f1",
+                    "text": "¿Cuántos meses puedes sobrevivir con tus ahorros si pierdes tus ingresos?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "none",
+                            "label": "Menos de 1 mes",
+                            "riskWeight": 1.0,
+                            "impactWeight": 1.0
+                        },
+                        {
+                            "value": "1-3",
+                            "label": "1-3 meses",
+                            "riskWeight": 0.7,
+                            "impactWeight": 0.7
+                        },
+                        {
+                            "value": "3-6",
+                            "label": "3-6 meses",
+                            "riskWeight": 0.4,
+                            "impactWeight": 0.4
+                        },
+                        {
+                            "value": "6plus",
+                            "label": "Más de 6 meses",
+                            "riskWeight": 0.2,
+                            "impactWeight": 0.2
+                        }
+                    ]
+                },
+                {
+                    "id": "f2",
+                    "text": "¿Cuál es tu situación laboral actual?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "stable_formal",
+                            "label": "Empleo formal estable",
+                            "riskWeight": 0.3
+                        },
+                        {
+                            "value": "freelance",
+                            "label": "Freelance/Emprendedor",
+                            "riskWeight": 0.6
+                        },
+                        {
+                            "value": "unstable",
+                            "label": "Situación inestable",
+                            "riskWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "f3",
+                    "text": "¿Tienes deudas importantes (créditos, hipoteca)?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "none",
+                            "label": "No tengo deudas",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "manageable",
+                            "label": "Sí, pero manejables",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "significant",
+                            "label": "Sí, son significativas",
+                            "riskWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "f4",
+                    "text": "¿Cuántas personas dependen económicamente de ti?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "none",
+                            "label": "Solo yo",
+                            "riskWeight": 0.3,
+                            "impactWeight": 0.3
+                        },
+                        {
+                            "value": "1-2",
+                            "label": "1-2 personas",
+                            "riskWeight": 0.6,
+                            "impactWeight": 0.7
+                        },
+                        {
+                            "value": "3plus",
+                            "label": "3 o más personas",
+                            "riskWeight": 0.8,
+                            "impactWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "f5_insurance",
+                    "text": "¿Tienes un seguro de vida?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "adequate",
+                            "label": "Sí, con cobertura adecuada",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "basic",
+                            "label": "Sí, pero básico",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "none",
+                            "label": "No tengo",
+                            "riskWeight": 1.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "auto",
+            "name": "Auto",
+            "icon": "🚗",
+            "description": "Evalúa los riesgos relacionados con tu vehículo",
+            "questions": [
+                {
+                    "id": "a1",
+                    "text": "¿Tienes un auto?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "yes",
+                            "label": "Sí",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "no",
+                            "label": "No (puedes saltar esta sección)",
+                            "riskWeight": 0.0
+                        }
+                    ]
+                },
+                {
+                    "id": "a2",
+                    "text": "¿Con qué frecuencia lo usas?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "daily",
+                            "label": "Diario",
+                            "riskWeight": 0.8
+                        },
+                        {
+                            "value": "weekly",
+                            "label": "Algunas veces por semana",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "rarely",
+                            "label": "Rara vez",
+                            "riskWeight": 0.3
+                        }
+                    ]
+                },
+                {
+                    "id": "a3",
+                    "text": "¿Qué tan nuevo es tu auto?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "new",
+                            "label": "Menos de 3 años",
+                            "riskWeight": 0.4,
+                            "impactWeight": 0.8
+                        },
+                        {
+                            "value": "mid",
+                            "label": "3-7 años",
+                            "riskWeight": 0.5,
+                            "impactWeight": 0.5
+                        },
+                        {
+                            "value": "old",
+                            "label": "Más de 7 años",
+                            "riskWeight": 0.7,
+                            "impactWeight": 0.3
+                        }
+                    ]
+                },
+                {
+                    "id": "a4_insurance",
+                    "text": "¿Qué tipo de seguro de auto tienes?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "comprehensive",
+                            "label": "Cobertura amplia",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "basic",
+                            "label": "Responsabilidad civil",
+                            "riskWeight": 0.6
+                        },
+                        {
+                            "value": "none",
+                            "label": "No tengo seguro",
+                            "riskWeight": 1.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "home",
+            "name": "Hogar",
+            "icon": "🏠",
+            "description": "Evalúa los riesgos de tu vivienda",
+            "questions": [
+                {
+                    "id": "ho1",
+                    "text": "¿Eres dueño de tu vivienda o rentas?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "owner",
+                            "label": "Soy dueño",
+                            "riskWeight": 0.6,
+                            "impactWeight": 0.8
+                        },
+                        {
+                            "value": "rent",
+                            "label": "Rento",
+                            "riskWeight": 0.4,
+                            "impactWeight": 0.4
+                        }
+                    ]
+                },
+                {
+                    "id": "ho2",
+                    "text": "¿Tu vivienda está en una zona de riesgo (inundaciones, sismos frecuentes)?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "no",
+                            "label": "No",
+                            "riskWeight": 0.3
+                        },
+                        {
+                            "value": "moderate",
+                            "label": "Riesgo moderado",
+                            "riskWeight": 0.6
+                        },
+                        {
+                            "value": "high",
+                            "label": "Zona de alto riesgo",
+                            "riskWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "ho3",
+                    "text": "¿Cuál es el valor aproximado de tus bienes en el hogar?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "low",
+                            "label": "Menos de $100,000 MXN",
+                            "riskWeight": 0.3,
+                            "impactWeight": 0.3
+                        },
+                        {
+                            "value": "medium",
+                            "label": "$100,000 - $500,000 MXN",
+                            "riskWeight": 0.5,
+                            "impactWeight": 0.6
+                        },
+                        {
+                            "value": "high",
+                            "label": "Más de $500,000 MXN",
+                            "riskWeight": 0.6,
+                            "impactWeight": 0.9
+                        }
+                    ]
+                },
+                {
+                    "id": "ho4_insurance",
+                    "text": "¿Tienes seguro de hogar o de contenidos?",
+                    "type": "multiple_choice",
+                    "options": [
+                        {
+                            "value": "comprehensive",
+                            "label": "Sí, amplia cobertura",
+                            "riskWeight": 0.2
+                        },
+                        {
+                            "value": "basic",
+                            "label": "Sí, pero básico",
+                            "riskWeight": 0.5
+                        },
+                        {
+                            "value": "none",
+                            "label": "No tengo",
+                            "riskWeight": 1.0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
